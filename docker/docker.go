@@ -21,7 +21,7 @@ func StartContainer(t *testing.T, image string) *Container {
 	cmd.Stdout = &out
 
 	if err := cmd.Run(); err != nil {
-		t.Fatalf("executing creating docker container %#v", err)
+		t.Fatalf("creating docker container %#v", err)
 	}
 
 	id := out.String()[0:12]
